@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+.star-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background: #000;
+  /* overflow: hidden; */
+}
+
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image: url("./public/stardust.png");
+  background-repeat: repeat;
+  background-size: 400px 400px; 
+  animation: starsMove 120s linear infinite;
+}
+
+.stars,
+
+.twinkling {
+  pointer-events: none;
+}
+
+
+
+.twinkling {
+  position: absolute;
+  inset: 0;
+  background-image: url("./public/images.jpg");
+  background-repeat: repeat;
+  background-size: 300px 300px;  
+  opacity: 0.5;
+  animation: twinkleMove 180s linear infinite;
+}
+
+
+@keyframes starsMove {
+  from { background-position: 0 0; }
+  to   { background-position: -2000px 2000px; }
+}
+
+@keyframes twinkleMove {
+  from { background-position: 0 0; }
+  to   { background-position: 2000px -2000px; }
+}
